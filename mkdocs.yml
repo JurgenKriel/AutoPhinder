@@ -1,0 +1,77 @@
+site_name: AutoPhinder
+site_description: Automated segmentation of autophagosomes in FIB-SEM datasets using micro-SAM
+site_url: https://jurgenkriel.github.io/AutoPhinder/
+repo_url: https://github.com/JurgenKriel/AutoPhinder
+repo_name: JurgenKriel/AutoPhinder
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: green
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: green
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+
+plugins:
+  - search
+  - mkdocs-jupyter:
+      execute: false
+      include_source: true
+      ignore_h1_titles: true
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+nav:
+  - Home: index.md
+  - Workflow:
+      - 1. Installation: installation.md
+      - 2. Ground truth in IMOD: ground-truth.md
+      - 3. Masks & dataset curation: dataset.md
+      - 4. Training: training.md
+      - 5. Inference on new data: inference.md
+  - Notebook walkthrough: notebooks/autophinder_walkthrough.ipynb
+  - Considerations: considerations.md
+  - Script reference: scripts.md

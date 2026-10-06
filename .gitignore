@@ -1,0 +1,12 @@
+# Local tooling
+.claude/
+site/
+__pycache__/
+*.pyc
+
+# Never commit SSH keys or other credentials
+*ssh-agent*
+id_rsa*
+id_ed25519*
+*.pem
+.cache/
