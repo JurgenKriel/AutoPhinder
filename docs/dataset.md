@@ -14,10 +14,11 @@ images/                     masks/
 
 Each mask contains the manually annotated autophagosomes corresponding to the original image.
 
-![Image, mask and overlay for two consecutive slices](assets/images/image-mask-pairs.png)
+![Image, mask and overlay before and after transforming the labels](assets/images/image-mask-pairs.png)
 
-*FIB-SEM image (1), ground-truth mask (2) and overlay (3) for two consecutive slices (A, B).
-Scale bar: 0.2 µm.*
+*FIB-SEM image (1), ground-truth mask (2) and overlay (3) before (A) and after (B) transforming the labels so
+that they line up with the EM image. Untransformed labels (A3) are offset from the autophagosome; transformed
+labels (B3) follow its membrane. Scale bar: 0.2 µm.*
 
 ### How the conversion works
 
